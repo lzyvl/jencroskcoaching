@@ -1,0 +1,528 @@
+/*======================================
+ROOT
+======================================*/
+
+:root{
+
+    --cream:#F8F4F0;
+    --white:#FFFCFA;
+    --sage:#8B9A84;
+    --sand:#D9C9BB;
+    --brown:#7A5E4C;
+    --dark:#2D2D2D;
+
+    --shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+/*======================================
+RESET
+======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+    color:var(--dark);
+    background:var(--white);
+    overflow-x:hidden;
+    line-height:1.8;
+
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+
+    width:min(1200px,90%);
+    margin:auto;
+
+}
+
+/*======================================
+TYPOGRAPHY
+======================================*/
+
+h1,h2,h3{
+
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--dark);
+
+}
+
+h1{
+
+    font-size:clamp(3rem,7vw,6rem);
+    line-height:1;
+
+}
+
+h2{
+
+    font-size:3rem;
+    margin-bottom:25px;
+
+}
+
+h3{
+
+    font-size:1.8rem;
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:#5d5d5d;
+    font-size:1.05rem;
+
+}
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:70px;
+
+}
+
+.section-title p{
+
+    color:var(--sage);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:.85rem;
+    margin-bottom:15px;
+
+}
+
+/*======================================
+BUTTONS
+======================================*/
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    transition:.35s ease;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.primary{
+
+    background:var(--brown);
+    color:white;
+
+}
+
+.primary:hover{
+
+    background:var(--sage);
+    transform:translateY(-3px);
+
+}
+
+.secondary{
+
+    border:1px solid white;
+    color:white;
+
+}
+
+.secondary:hover{
+
+    background:white;
+    color:var(--brown);
+
+}
+
+/*======================================
+NAVBAR
+======================================*/
+
+header{
+
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+
+}
+
+.navbar{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 0;
+
+    transition:.4s;
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+    color:white;
+    font-size:2rem;
+    letter-spacing:1px;
+
+}
+
+.nav-links{
+
+    display:flex;
+    gap:40px;
+
+}
+
+.nav-links a{
+
+    color:white;
+    font-size:.95rem;
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    opacity:.7;
+
+}
+
+.nav-btn{
+
+    border:1px solid white;
+    padding:12px 28px;
+    border-radius:50px;
+    color:white;
+    transition:.3s;
+
+}
+
+.nav-btn:hover{
+
+    background:white;
+    color:var(--brown);
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+}
+
+/*======================================
+HERO
+======================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    background:url("../images/hero.jpg") center center/cover;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(120,90,75,.45);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(700px,90%);
+
+    margin-left:8%;
+
+    color:white;
+
+}
+
+.subtitle{
+
+    color:white;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    color:white;
+
+    margin-bottom:30px;
+
+}
+
+.hero-text{
+
+    color:white;
+
+    font-size:1.15rem;
+
+    margin-bottom:40px;
+
+    max-width:550px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+
+}
+
+/*======================================
+SECTIONS
+======================================*/
+
+section{
+
+    padding:120px 0;
+
+}
+
+/*======================================
+ABOUT
+======================================*/
+
+.about{
+
+    background:var(--white);
+
+}
+
+.about .container{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.about-image{
+
+    height:650px;
+
+    border-radius:18px;
+
+    background:url("../images/about.jpg") center/cover;
+
+}
+
+.about-text p{
+
+    margin-bottom:25px;
+
+}
+
+/*======================================
+SERVICES
+======================================*/
+
+.services{
+
+    background:var(--cream);
+
+}
+
+.service-grid{
+
+    width:min(1200px,90%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.service-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*======================================
+WHY
+======================================*/
+
+.why .container{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.why-image{
+
+    height:650px;
+
+    border-radius:18px;
+
+    background:url("../images/service1.jpg") center/cover;
+
+}
+
+.why ul{
+
+    margin-top:35px;
+
+}
+
+.why li{
+
+    margin-bottom:18px;
+
+    font-size:1.1rem;
+
+}
+
+/*======================================
+TESTIMONIALS
+======================================*/
+
+.testimonials{
+
+    background:var(--cream);
+
+}
+
+.testimonial-slider{
+
+    width:min(1100px,90%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.testimonial{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.testimonial p{
+
+    margin:20px 0;
+
+}
+
+/*======================================
+CONTACT
+======================================*/
+
+.contact{
+
+    text-align:center;
+
+    background:var(--white);
+
+}
+
+.contact p{
+
+    margin-bottom:40px;
+
+}
+
+/*======================================
+FOOTER
+======================================*/
+
+footer{
+
+    background:var(--cream);
+
+    text-align:center;
+
+    padding:35px;
+
+    color:#666;
+
+}
